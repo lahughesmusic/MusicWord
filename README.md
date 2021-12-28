@@ -9,8 +9,7 @@ This code is a baby so there's more to come soon!
 
 Todos: 
 
-// condense the code by not having the notes hard coded in, but by using an object {key: "note name", value: "cy position"} to draw the circle (note) in the right
-position based on the random word pulled. 
+// condense the code by not having the notes hard coded in, but by using an object {key: "note name", value: "cy position"} to draw the <Svg><Circle/><Svg> (note) in the right position based on each letter of the random word pulled. 
 
 // create home page with music option, sfx option, and separate modes. 
 
