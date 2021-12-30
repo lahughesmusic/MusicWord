@@ -1,5 +1,5 @@
-import { StyleSheet, View, TextInput } from "react-native";
-import Svg, { Circle } from "react-native-svg";
+import { StyleSheet, View, Text, TextInput } from "react-native";
+import Svg, { Circle, Line } from "react-native-svg";
 import Lines from "./Lines";
 import word from "../assets/word.json";
 import {
@@ -11,98 +11,29 @@ import {
   BassHard
 } from "./CYnums";
 
-const outsideLetters = [];
-const musicalLetters = [];
-
-function getNote() {
-  //pick random word from word.json
-
-  let letters = word.words[Math.floor(Math.random() * 73)];
-  letters = letters.split("");
-  const musicalAlphabet = word.musicLetters;
-
-  //check if letter is part of musical alphabet
-  for (let i = 0; i < letters.length; i++) {
-    if (musicalAlphabet.includes(letters[i])) {
-      musicalLetters.push(letters[i]);
-      outsideLetters.push(i);
-    } else {
-      outsideLetters.push(letters[i]);
-      musicalLetters.push(i);
-    }
-  }
-  console.log(outsideLetters);
-  console.log(musicalLetters);
-  return outsideLetters, musicalLetters;
-}
-
-getNote();
-
-const cy = [];
-
-function getCYTrebleEasy() {
-  //use musicalLetters to find object key
-  for (let i = 0; i < musicalLetters.length; i++) {
-    cy.push(TrebleEasy[musicalLetters[i]]);
-  }
-}
-
-function getCYTrebleMedium() {
-  //use musicalLetters to find object key
-  for (let i = 0; i < musicalLetters.length; i++) {
-    cy.push(TrebleMedium[musicalLetters[i]]);
-  }
-  console.log("this is cy array " + cy);
-}
-
-getCYTrebleMedium();
-
-//get back the CY number for circle placement (note)
-function getCYTrebleHard() {
-  //use musicalLetters to find object key
-  for (let i = 0; i < musicalLetters.length; i++) {
-    cy.push(TrebleHard[musicalLetters[i]]);
-  }
-}
-
-function getCYBassEasy() {
-  //use musicalLetters to find object key
-  for (let i = 0; i < musicalLetters.length; i++) {
-    cy.push(BassEasy[musicalLetters[i]]);
-  }
-
-  function getCYBassMedium() {
-    //use musicalLetters to find object key
-    for (let i = 0; i < musicalLetters.length; i++) {
-      cy.push(BassMedium[musicalLetters[i]]);
-    }
-  }
-
-  function getCYBassHard() {
-    //use musicalLetters to find object key
-    for (let i = 0; i < musicalLetters.length; i++) {
-      cy.push(BassHard[musicalLetters[i]]);
-    }
-  }
-}
-
-const experiment = () => {
+const Experiment = () => {
   return (
     <View>
       <Svg>
+        <Text>HEY YOU WORKING</Text>
         <Circle
           cx="50"
-          cy={TrebleBassHard}
-          r="6"
+          cy="4"
+          r="5"
           stroke="black"
           strokeWidth="2.5"
           fill="black"
         />
-        <Lines />
+        <Line x1="0" y1="16" x2="200" y2="16" stroke="black" strokeWidth="1" />
+        <Line x1="0" y1="32" x2="200" y2="32" stroke="black" strokeWidth="1" />
+        <Line x1="0" y1="48" x2="200" y2="48" stroke="black" strokeWidth="1" />
+        <Line x1="0" y1="64" x2="200" y2="64" stroke="black" strokeWidth="1" />
+        <Line x1="0" y1="80" x2="200" y2="80" stroke="black" strokeWidth="1" />
       </Svg>
     </View>
   );
 };
+
 const TC1 = () => {
   return (
     <View>
@@ -125,7 +56,7 @@ const TD1 = () => {
         <Circle
           cx="50"
           cy="88"
-          r="6"
+          r="5"
           stroke="black"
           strokeWidth="2.5"
           fill="black"
@@ -147,7 +78,7 @@ const TE1 = () => {
         <Circle
           cx="50"
           cy="80"
-          r="6"
+          r="5"
           stroke="black"
           strokeWidth="2.5"
           fill="black"
@@ -169,7 +100,7 @@ const TF1 = () => {
         <Circle
           cx="50"
           cy="72"
-          r="6"
+          r="5"
           stroke="black"
           strokeWidth="2.5"
           fill="black"
@@ -191,7 +122,7 @@ const TG1 = () => {
         <Circle
           cx="50"
           cy="64"
-          r="6"
+          r="5"
           stroke="black"
           strokeWidth="2.5"
           fill="black"
@@ -213,7 +144,7 @@ const TA1 = () => {
         <Circle
           cx="50"
           cy="56"
-          r="6"
+          r="5"
           stroke="black"
           strokeWidth="2.5"
           fill="black"
@@ -235,7 +166,7 @@ const TB1 = () => {
         <Circle
           cx="50"
           cy="48"
-          r="6"
+          r="5"
           stroke="black"
           strokeWidth="2.5"
           fill="black"
@@ -257,7 +188,7 @@ const TC2 = () => {
         <Circle
           cx="50"
           cy="40"
-          r="6"
+          r="5"
           stroke="black"
           strokeWidth="2.5"
           fill="black"
@@ -281,7 +212,7 @@ const TD2 = () => {
         <Circle
           cx="50"
           cy="32"
-          r="6"
+          r="5"
           stroke="black"
           strokeWidth="2.5"
           fill="black"
@@ -304,7 +235,7 @@ const TE2 = () => {
         <Circle
           cx="50"
           cy="24"
-          r="6"
+          r="5"
           stroke="black"
           strokeWidth="2.5"
           fill="black"
@@ -326,7 +257,7 @@ const TF2 = () => {
         <Circle
           cx="50"
           cy="16"
-          r="7"
+          r="5"
           stroke="black"
           strokeWidth="2.5"
           fill="black"
@@ -362,7 +293,7 @@ const staff = StyleSheet.create({
     borderBottomWidth: 0.5,
     textAlign: "center",
     width: 100,
-    height: 30,
+    height: 40,
     fontSize: 30
   }
 });
@@ -382,5 +313,6 @@ export {
   TG2,
   TA2,
   TB2,
-  TC3
+  TC3,
+  Experiment
 };

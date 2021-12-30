@@ -9,7 +9,7 @@ const BA1 = () => {
         <Circle
           cx="50"
           cy="16"
-          r="7"
+          r="5"
           stroke="black"
           strokeWidth="2.5"
           fill="black"
@@ -32,7 +32,7 @@ const BG1 = () => {
         <Circle
           cx="50"
           cy="24"
-          r="6"
+          r="5"
           stroke="black"
           strokeWidth="2.5"
           fill="black"
@@ -55,7 +55,7 @@ const BF1 = () => {
         <Circle
           cx="50"
           cy="32"
-          r="6"
+          r="5"
           stroke="black"
           strokeWidth="2.5"
           fill="black"
@@ -78,7 +78,7 @@ const BE1 = () => {
         <Circle
           cx="50"
           cy="40"
-          r="6"
+          r="5"
           stroke="black"
           strokeWidth="2.5"
           fill="black"
@@ -102,7 +102,7 @@ const BD1 = () => {
         <Circle
           cx="50"
           cy="48"
-          r="6"
+          r="5"
           stroke="black"
           strokeWidth="2.5"
           fill="black"
@@ -125,7 +125,7 @@ const BC2 = () => {
         <Circle
           cx="50"
           cy="56"
-          r="6"
+          r="5"
           stroke="black"
           strokeWidth="2.5"
           fill="black"
@@ -148,7 +148,7 @@ const BB2 = () => {
         <Circle
           cx="50"
           cy="64"
-          r="6"
+          r="5"
           stroke="black"
           strokeWidth="2.5"
           fill="black"
@@ -171,7 +171,7 @@ const BA2 = () => {
         <Circle
           cx="50"
           cy="72"
-          r="6"
+          r="5"
           stroke="black"
           strokeWidth="2.5"
           fill="black"
@@ -194,7 +194,7 @@ const BG2 = () => {
         <Circle
           cx="50"
           cy="80"
-          r="6"
+          r="5"
           stroke="black"
           strokeWidth="2.5"
           fill="black"

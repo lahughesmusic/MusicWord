@@ -1,4 +1,5 @@
 const TrebleEasy = {
+  c: 94,
   d: 88,
   e: 80,
   f: 72,
@@ -6,6 +7,7 @@ const TrebleEasy = {
 };
 
 const TrebleMedium = {
+  c: 94,
   d: 88,
   e: 80,
   f: 72,
@@ -16,6 +18,7 @@ const TrebleMedium = {
 };
 
 const TrebleHard = {
+  c: 94,
   d: 88,
   e: 80,
   f: 72,
@@ -30,6 +33,7 @@ const TrebleHard = {
 };
 
 const BassEasy = {
+  c: 6,
   b: 8,
   a: 16,
   g: 24,
@@ -37,6 +41,7 @@ const BassEasy = {
 };
 
 const BassMedium = {
+  c: 6,
   b: 8,
   a: 16,
   g: 24,
@@ -47,6 +52,7 @@ const BassMedium = {
 };
 
 const BassHard = {
+  c: 6,
   b: 8,
   a: 16,
   g: 24,
