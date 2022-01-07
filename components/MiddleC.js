@@ -1,6 +1,5 @@
 import Svg, { Line, Circle } from "react-native-svg";
 import { StyleSheet, View, TextInput } from "react-native";
-import Lines from "./Lines";
 
 const MiddleCBass = () => {
   return (

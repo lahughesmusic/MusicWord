@@ -1,46 +1,44 @@
-import Svg, { Line, Circle } from "react-native-svg";
-import { View, StyleSheet } from "react-native";
-import { render } from "react-dom";
+import { View, StyleSheet, Image } from "react-native";
+import { Dropdown } from "react-native-element-dropdown";
+import React, { useState } from "react";
 
-const Playground = () => {
-  return (
-    <View style={style.view}>
-      <Svg style={style.playground}>
-        <Circle
-          cx="40"
-          cy="70"
-          r="5"
-          stroke="black"
-          strokeWidth="1"
-          fill="black"
-        />
-        {/* ------------------------------------------------------------- */}
+const data = [
+  { label: "A", value: "1" },
+  { label: "B", value: "2" },
+  { label: "C", value: "3" },
+  { label: "D", value: "4" },
+  { label: "E", value: "5" },
+  { label: "F", value: "6" },
+  { label: "G", value: "7" }
+];
 
-        <Line x1="36" y1="72" x2="50" y2="80" stroke="black" strokeWidth="1" />
-        <Line x1="36" y1="72" x2="50" y2="80" stroke="black" strokeWidth="1" />
+// const Playground = () => {};
 
-        {/* ------------------------------------------------------------- */}
-        <Line x1="0" y1="16" x2="100" y2="16" stroke="black" strokeWidth="1" />
-        <Line x1="0" y1="32" x2="100" y2="32" stroke="black" strokeWidth="1" />
-        <Line x1="0" y1="48" x2="100" y2="48" stroke="black" strokeWidth="1" />
-        <Line x1="0" y1="64" x2="100" y2="64" stroke="black" strokeWidth="1" />
-        <Line x1="0" y1="80" x2="100" y2="80" stroke="black" strokeWidth="1" />
-      </Svg>
-    </View>
-  );
-};
+// export default Playground;
 
-const style = StyleSheet.create({
-  view: {
-    backgroundColor: "lightpink"
+const styles = StyleSheet.create({
+  dropdown: {
+    margin: 20,
+    height: 50,
+    width: 30,
+    borderBottomColor: "gray",
+    borderBottomWidth: 0.5
   },
-  playground: {
-    flex: 1,
-    padding: 200,
-    marginLeft: 300,
-    marginTop: 100,
-    height: 200
+  icon: {
+    marginRight: 5
+  },
+  placeholderStyle: {
+    fontSize: 16
+  },
+  selectedTextStyle: {
+    fontSize: 10
+  },
+  iconStyle: {
+    width: 20,
+    height: 20
+  },
+  inputSearchStyle: {
+    height: 40,
+    fontSize: 16
   }
 });
-
-export { Playground };

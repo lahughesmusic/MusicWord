@@ -1,4 +1,4 @@
-import { View } from "react-native";
+import { View, Image, StyleSheet } from "react-native";
 import Svg, { Line } from "react-native-svg";
 
 const Lines = () => {
@@ -14,5 +14,15 @@ const Lines = () => {
     </View>
   );
 };
+
+const style = StyleSheet.create({
+  line: {
+    flex: 1,
+    padding: 200,
+    marginLeft: 300,
+    marginTop: 100,
+    height: 200
+  }
+});
 
 export { Lines };
