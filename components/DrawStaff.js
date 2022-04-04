@@ -1,5 +1,5 @@
 import Svg, { Line, Circle } from "react-native-svg";
-import { StyleSheet, View, Text, TextInput, Picker } from "react-native";
+import { StyleSheet, View, Text, TextInput, Picker, Modal } from "react-native";
 import {
   TrebleEasy,
   TrebleMedium,
@@ -76,72 +76,83 @@ const DrawStaff = () => {
   ];
 
   const list = () => {
+    const [text, setText] = useState("");
     return cy.map((element, i) => {
       if (!cy[i]) {
         console.log(false);
         return (
           <View key={i}>
-            <Svg style={styles.staves}>
-              <Lines></Lines>
-            </Svg>
+            <Svg style={styles.staves}>{/* <Lines></Lines> */}</Svg>
             <Text key={i} style={styles.text}>
-              {outsideLetters[i]}
+              {outsideLetters[i].toUpperCase()}
             </Text>
           </View>
         );
       } else {
         return (
-          <View style={styles.container}>
-            <Svg key={i} style={styles.staves}>
-              <Circle
-                cx="50"
-                cy={cy[i]}
-                r="5"
-                stroke="black"
-                strokeWidth="2.5"
-                fill="black"
+          <View key={i} style={styles.container}>
+            <View>
+              <Svg>
+                <Circle
+                  cx="50"
+                  cy={cy[i]}
+                  r="5"
+                  stroke="black"
+                  strokeWidth="2.5"
+                  fill="black"
+                />
+                <Line
+                  x1="0"
+                  y1="16"
+                  x2="400"
+                  y2="16"
+                  stroke="black"
+                  strokeWidth="1"
+                />
+                <Line
+                  x1="0"
+                  y1="32"
+                  x2="400"
+                  y2="32"
+                  stroke="black"
+                  strokeWidth="1"
+                />
+                <Line
+                  x1="0"
+                  y1="48"
+                  x2="400"
+                  y2="48"
+                  stroke="black"
+                  strokeWidth="1"
+                />
+                <Line
+                  x1="0"
+                  y1="64"
+                  x2="400"
+                  y2="64"
+                  stroke="black"
+                  strokeWidth="1"
+                />
+                <Line
+                  x1="0"
+                  y1="80"
+                  x2="400"
+                  y2="80"
+                  stroke="black"
+                  strokeWidth="1"
+                />
+              </Svg>
+            </View>
+            <View>
+              <TextInput
+                style={styles.textInput}
+                maxLength={1}
+                name={musicalLetters[i]}
+                textAlign="center"
+                onChangeText={(text) => setText(text)}
               />
-              <Line
-                x1="0"
-                y1="16"
-                x2="400"
-                y2="16"
-                stroke="black"
-                strokeWidth="1"
-              />
-              <Line
-                x1="0"
-                y1="32"
-                x2="400"
-                y2="32"
-                stroke="black"
-                strokeWidth="1"
-              />
-              <Line
-                x1="0"
-                y1="48"
-                x2="400"
-                y2="48"
-                stroke="black"
-                strokeWidth="1"
-              />
-              <Line
-                x1="0"
-                y1="64"
-                x2="400"
-                y2="64"
-                stroke="black"
-                strokeWidth="1"
-              />
-              <Line
-                x1="0"
-                y1="80"
-                x2="400"
-                y2="80"
-                stroke="black"
-                strokeWidth="1"
-              />
-            </Svg>
+              <Text>{text}</Text>
+            </View>
           </View>
         );
       }
@@ -155,23 +166,32 @@ const styles = StyleSheet.create({
   staves: {
     flex: 1,
     flexDirection: "row",
-    marginTop: 50,
+    marginTop: 90,
     height: 100,
     padding: 10
   },
   text: {
     fontSize: 40,
-    flexDirection: "row",
-
-    flex: 1
+    marginBottom: 130
   },
   textInput: {
-    height: 10
+    marginHorizontal: 10,
+    marginBottom: 300,
+    height: 100,
+    padding: 10,
+    borderBottomColor: "black",
+    borderBottomWidth: 1,
+    fontSize: 30
   },
   container: {
     flex: 1,
-    justifyContent: "space-around",
-    flexDirection: "column"
+    justifyContent: "center",
+    flexDirection: "column",
+    marginTop: 150
+  },
+  modal: {
+    height: 100,
+    width: 100
   }
 });
 

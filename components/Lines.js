@@ -16,13 +16,13 @@ const Lines = () => {
 };
 
 const style = StyleSheet.create({
-  line: {
-    flex: 1,
-    padding: 200,
-    marginLeft: 300,
-    marginTop: 100,
-    height: 200
-  }
+  // line: {
+  //   flex: 1,
+  //   padding: 200,
+  //   marginLeft: 300,
+  //   marginTop: 100,
+  //   height: 200
+  // }
 });
 
 export { Lines };
